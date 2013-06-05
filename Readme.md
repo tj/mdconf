@@ -1,7 +1,9 @@
 
 # mdconf
 
-  Markdown driven configuration! Using the fantastic markdown parser [marked](https://github.com/chjj/marked).
+  Markdown driven configuration!
+
+  Using the fantastic markdown parser [marked](https://github.com/chjj/marked).
 
 ## Installation
 
