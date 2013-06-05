@@ -100,6 +100,8 @@ output json:
 
 # Scripts
 
+  My site does almost nothing:
+
     document.write('<h1>mdconf</h1>')
     document.write('<p>Markdown configuration is pretty cool</p>')
 
