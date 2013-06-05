@@ -6,7 +6,15 @@
 
 # Styles
 
+  Main structural styling:
+
     body {
       padding: 50px;
       font: 14px Helvetica;
+    }
+
+  Some other stuff:
+
+    button {
+      padding: 15px;
     }

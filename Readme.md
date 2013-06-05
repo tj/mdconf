@@ -1,7 +1,7 @@
 
 # mdconf
 
-  Markdown driven configuration!
+  Markdown driven configuration! Using the fantastic markdown parser [marked](https://github.com/chjj/marked).
 
 ## Installation
 
@@ -89,6 +89,46 @@ output json:
       "max": "1gb",
       "dir": "/data/uploads"
     }
+  }
+}
+```
+
+  With markdown blocks you could easily use this as a tool for
+  static site generation:
+
+```md
+
+# Scripts
+
+    document.write('<h1>mdconf</h1>')
+    document.write('<p>Markdown configuration is pretty cool</p>')
+
+# Styles
+
+  Main structural styling:
+
+    body {
+      padding: 50px;
+      font: 14px Helvetica;
+    }
+
+  Some other stuff:
+
+    button {
+      padding: 15px;
+    }
+```
+
+ yields:
+
+```js
+{
+  "scripts": [
+    "document.write('<h1>mdconf</h1>')\ndocument.write('<p>Markdown configuration is pretty cool</p>')"
+  ],
+  "styles": {
+    "body { padding": "50px;\n  font: 14px Helvetica;\n}",
+    "button { padding": "15px;\n}"
   }
 }
 ```
