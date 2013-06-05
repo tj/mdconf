@@ -38,6 +38,9 @@ module.exports = function(str, options){
       case 'text':
         put(conf, keys, tok.text);
         break;
+      case 'code':
+        put(conf, keys, tok.text);
+        break;
     }
   });
 
