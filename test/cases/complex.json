@@ -1,0 +1,28 @@
+{
+  "defaults": {
+    "upload": {
+      "max": "200mb",
+      "dir": "/tmp",
+      "thumbnail sizes": [
+        "50x50",
+        "300x300",
+        "600x600",
+        "900x900"
+      ]
+    },
+    "s3": {
+      "api key": "111111",
+      "secret": "222222",
+      "buckets": {
+        "avatars": "myapp-avatars",
+        "assets": "myapp-assets",
+        "files": "myapp-files"
+      }
+    }
+  },
+  "production": {
+    "upload": {
+      "max": "200mb"
+    }
+  }
+}
