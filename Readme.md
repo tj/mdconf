@@ -19,7 +19,8 @@ parse('string of markdown');
 
 ## Example
 
-input markdown
+Markdown headings act as keys, list items with `:` act as maps,
+otherwise regular lists behave as.. lists.
 
 ```md
 # Defaults
