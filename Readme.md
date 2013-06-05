@@ -25,6 +25,9 @@ otherwise regular lists behave as.. lists.
 ```md
 # Defaults
 
+  Since this is markdown you can still have regular text
+  to explain what the hell is going on.
+
 ## Upload
 
   - max: 200mb
