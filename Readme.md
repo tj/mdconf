@@ -1,4 +1,3 @@
-
 # mdconf
 
   Markdown driven configuration!
@@ -141,7 +140,7 @@ output json:
 
 (The MIT License)
 
-Copyright (c) 2012 TJ Holowaychuk &lt;tj@vision-media.ca&gt;
+Copyright (c) 2013 TJ Holowaychuk &lt;tj@vision-media.ca&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
