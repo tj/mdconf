@@ -12,7 +12,7 @@ $ npm install mdconf
 
 ## ports
 
-- [Python port](https://github.com/hit9/mdconf)
+- [Python port](https://github.com/hit9/mdconf.py)
 
 ## API
 
