@@ -136,6 +136,10 @@ output json:
 }
 ```
 
+## Porting mdconf to other languages
+
+- [Python port](https://github.com/hit9/mdconf)
+
 ## License
 
 (The MIT License)
