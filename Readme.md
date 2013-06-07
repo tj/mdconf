@@ -10,6 +10,10 @@
 $ npm install mdconf
 ```
 
+## ports
+
+- [Python port](https://github.com/hit9/mdconf)
+
 ## API
 
 ```js
@@ -135,10 +139,6 @@ output json:
   }
 }
 ```
-
-## Porting mdconf to other languages
-
-- [Python port](https://github.com/hit9/mdconf)
 
 ## License
 
