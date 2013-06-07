@@ -133,10 +133,10 @@ output json:
   "scripts": [
     "document.write('<h1>mdconf</h1>')\ndocument.write('<p>Markdown configuration is pretty cool</p>')"
   ],
-  "styles": {
-    "body { padding": "50px;\n  font: 14px Helvetica;\n}",
-    "button { padding": "15px;\n}"
-  }
+  "styles": [
+    "body {\n  padding: 50px;\n  font: 14px Helvetica;\n}",
+    "button {\n  padding: 15px;\n}"
+  ]
 }
 ```
 

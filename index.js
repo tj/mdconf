@@ -39,7 +39,7 @@ module.exports = function(str, options){
         put(conf, keys, tok.text);
         break;
       case 'code':
-        put(conf, keys, tok.text);
+        put(conf, keys, tok.text, true);
         break;
     }
   });
@@ -57,7 +57,7 @@ module.exports = function(str, options){
  * @api private
  */
 
-function put(obj, keys, str) {
+function put(obj, keys, str, code) {
   var target = obj;
   var last;
 
@@ -66,6 +66,13 @@ function put(obj, keys, str) {
     last = target;
     target[key] = target[key] || {};
     target = target[key];
+  }
+
+  // code
+  if (code) {
+    if (!Array.isArray(last[key])) last[key] = [];
+    last[key].push(str);
+    return;
   }
 
   var i = str.indexOf(':');
