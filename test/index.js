@@ -1,5 +1,6 @@
 
 var fs = require('fs');
+var should = require('should');
 var dir = fs.readdirSync;
 var read = fs.readFileSync;
 var join = require('path').join;
