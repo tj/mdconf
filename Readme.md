@@ -62,6 +62,15 @@ otherwise regular lists behave as.. lists.
 
   - max: 1gb
   - dir: /data/uploads
+
+## Sites
+
+| hostname     | build   | coverage  |
+| :----------- | :------:| --------: |
+| google.com   | passing |       94% |
+| facebook.com | passing |       97% |
+| twitter.com  | failed  |       81% |
+| myspace.com  | unkown  |       0%  |
 ```
 
 output json:
@@ -93,7 +102,29 @@ output json:
     "upload": {
       "max": "1gb",
       "dir": "/data/uploads"
-    }
+    },
+    "sites": [
+      {
+        "hostname": "google.com",
+        "build": "passing",
+        "coverage": "94%"
+      },
+      {
+        "hostname": "facebook.com",
+        "build": "passing",
+        "coverage": "97%"
+      },
+      {
+        "hostname": "twitter.com",
+        "build": "failed",
+        "coverage": "81%"
+      },
+      {
+        "hostname": "myspace.com",
+        "build": "unkown",
+        "coverage": "0%"
+      }
+    ]
   }
 }
 ```

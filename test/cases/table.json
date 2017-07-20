@@ -1,0 +1,24 @@
+{
+  "sites": [
+    {
+      "host": "google.com",
+      "build": "passing",
+      "coverage": "94%"
+    },
+    {
+      "host": "facebook.com",
+      "build": "passing",
+      "coverage": "97%"
+    },
+    {
+      "host": "twitter.com",
+      "build": "failed",
+      "coverage": "81%"
+    },
+    {
+      "host": "myspace.com",
+      "build": "unkown",
+      "coverage": "0%"
+    }
+  ]
+}
