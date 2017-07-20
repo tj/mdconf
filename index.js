@@ -41,6 +41,9 @@ module.exports = function(str, options){
       case 'code':
         put(conf, keys, tok.text, true);
         break;
+      case 'table':
+        put(conf, keys, null, null, {headers: tok.header, rows: tok.cells});
+        break;
     }
   });
 
@@ -54,15 +57,17 @@ module.exports = function(str, options){
  * @param {Object} obj
  * @param {Array} keys
  * @param {String} str
+ * @param {Object} table
  * @api private
  */
 
-function put(obj, keys, str, code) {
+function put(obj, keys, str, code, table) {
   var target = obj;
   var last;
+  var key;
 
   for (var i = 0; i < keys.length; i++) {
-    var key = keys[i];
+    key = keys[i];
     last = target;
     target[key] = target[key] || {};
     target = target[key];
@@ -72,6 +77,19 @@ function put(obj, keys, str, code) {
   if (code) {
     if (!Array.isArray(last[key])) last[key] = [];
     last[key].push(str);
+    return;
+  }
+
+  // table
+  if (table) {
+    if (!Array.isArray(last[key])) last[key] = [];
+    for (var ri = 0; ri < table.rows.length; ri++) {
+      var arrItem = {};
+      for (var hi = 0; hi < table.headers.length; hi++) {
+        arrItem[normalize(table.headers[hi])] = table.rows[ri][hi];
+      }
+      last[key].push(arrItem);
+    }
     return;
   }
 

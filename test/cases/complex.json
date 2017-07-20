@@ -23,6 +23,28 @@
   "production": {
     "upload": {
       "max": "200mb"
-    }
+    },
+    "sites": [
+      {
+        "hostname": "google.com",
+        "build": "passing",
+        "coverage": "94%"
+      },
+      {
+        "hostname": "facebook.com",
+        "build": "passing",
+        "coverage": "97%"
+      },
+      {
+        "hostname": "twitter.com",
+        "build": "failed",
+        "coverage": "81%"
+      },
+      {
+        "hostname": "myspace.com",
+        "build": "unkown",
+        "coverage": "0%"
+      }
+    ]
   }
 }
