@@ -1,19 +1,21 @@
+const expect = require('chai').expect;
+const testUtils = require('./test-utils');
+const parse = require('../index');
 
-var fs = require('fs');
-var dir = fs.readdirSync;
-var read = fs.readFileSync;
-var join = require('path').join;
-var resolve = require('path').resolve;
-var parse = require('..');
+describe('mdconf integration tests', function() {
+  let allTestCases;
 
-dir('test/cases').forEach(function(file){
-  if (~file.indexOf('.json')) return;
-  var base = file.replace('.md', '');
-  describe(base, function(){
-    it('should work', function(){
-      var md = read(join('test/cases', file), 'utf8');
-      var json = require(resolve('test/cases', file.replace('.md', '.json')));
-      parse(md).should.eql(json);
-    })
-  })
+  before(async function () {
+    allTestCases = await testUtils.getTestCases();
+  });
+
+  it('should pass integration tests', function () {
+    allTestCases.forEach(testCase => {
+      describe('Test Case(s) for ' + testCase.testName, function () {
+        it('should match expected output with no options', () => {
+          expect(parse(testCase.md)).to.eql(testCase.json);
+        });
+      });
+    });
+  });
 });
