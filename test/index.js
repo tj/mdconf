@@ -1,5 +1,4 @@
 const expect = require('chai').expect;
-
 const testUtils = require('./test-utils');
 const parse = require('../index');
 

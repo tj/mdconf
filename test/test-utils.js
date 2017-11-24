@@ -3,7 +3,10 @@ const path = require('path');
 
 const TEST_CASES_DIRECTORY = path.join('test', 'cases');
 
-
+/**
+ * Returns all the test cases in the directory 
+ * asynchronously as an array of different attributes of testCase
+ */
 async function getTestCases() {
     const directories = await fs.readdir(TEST_CASES_DIRECTORY);
     const testCases = [];
@@ -32,4 +35,4 @@ function resolveTestCaseFile(filename) {
     return path.resolve(TEST_CASES_DIRECTORY, filename);
 }
 
-module.exports = { getTestCases: getTestCases };
+exports.getTestCases = getTestCases;
